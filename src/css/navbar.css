@@ -1,0 +1,75 @@
+.showWidth {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.navbar {
+    position: fixed;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.655);
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+}
+.navbar-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 80%;
+}
+.links {
+    display: flex;
+    gap: 30px;
+}
+
+.links li {
+    list-style-type: none;
+}
+
+.links li button {
+    font-size: large;
+    color: rgb(63, 63, 63);
+    border: none;
+    background: none;
+}
+.links li button:hover {
+    color: rgb(110, 110, 110);
+    transform: translateY(-5px);
+    transition: transform 0.4s ease;
+}
+.links li button:focus {
+    color: rgb(165, 134, 42);
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 1228px) {
+    .links {
+        position: absolute;
+        z-index: -1;
+        background-color: rgb(232, 232, 232);
+        border-top: 3px solid #3dc2ff;
+        justify-content: center;
+        align-items: start;
+        top: 40px;
+        flex-direction: column;
+        width: 100%;
+        height: 0; /* Anfangshöhe ist 0 */
+        overflow: hidden; /* Verhindert, dass der Inhalt sichtbar ist, wenn die Höhe 0 ist */
+        transition: height 0.8s ease; 
+    }
+    .links.active {
+        height: 400px; /* Zielhöhe, die das Element haben soll */
+    }
+    .menu {
+        display: block;
+    }
+}

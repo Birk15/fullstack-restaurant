@@ -1,0 +1,66 @@
+.bottom {
+    bottom: 0;
+    height: 500px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footer {
+    color: white;
+}
+
+.bottom-content {
+    display: flex;
+    gap: 10vw;
+    margin-top: 40px;
+}
+
+.informations {
+    color: white;
+    text-align: end;
+}
+.informations h3 {
+    color: rgb(165, 138, 42);
+}
+
+.about {
+    color: white;
+}
+.about .ionicon {
+    width: 100px;
+    color: #a58a2a;
+}
+
+.parent-input {
+    margin-bottom: 20px;
+}
+.parent-input p {
+    margin-bottom: 0px;
+    color: rgb(84, 83, 83);
+}
+.input {
+    width: 300px;
+}
+
+@media (max-width: 800px) {
+    .bottom-content {
+        gap: 10px;
+    }
+    .newsletter {
+        width: 320px;
+    }
+}
+@media (max-width: 690px) {
+    .bottom {
+        height: auto;
+    }
+    .bottom-content {
+        flex-direction: column;
+    }
+}

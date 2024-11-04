@@ -1,0 +1,100 @@
+.parent {
+    padding-top: 100px;
+}
+
+.gasthaus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    background-color: blanchedalmond;
+}
+.getränkekarte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    background-color: rgb(237, 174, 81);
+}
+.mittagstisch {
+    height: 700px;
+    background-color: rgb(204, 197, 186);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.mittagstisch .Image {
+    padding: 20px;
+    background-color: white;
+    z-index: 2;
+    width: 800px;
+    height: 500px; /* Angepasste Höhe für besseren Effekt */
+}
+.mittagstisch .Image img {
+    width: 100%; /* Passt das Bild an die Containerbreite an */
+    height: 100%; /* Passt das Bild an die Containerhöhe an */
+    object-fit: cover; /* Bild wird zugeschnitten, um den Container auszufüllen */
+}
+.mittagstisch h1 {
+    position: absolute;
+    z-index: 3;
+    color: white;
+    background-color: aqua;
+}
+.mittagstisch p {
+    z-index: 3;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: white;
+}
+
+.reservieren {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 700px;
+    background-color: rgb(255, 153, 0);
+}
+.config-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    min-width: 100%;
+    gap: 30px;
+    padding: 40px;
+    position: relative;
+}
+
+.config-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.config-container span {
+    color: blue;
+}
+.config-container span:hover {
+    text-decoration: underline;
+}
+.btnTable {
+    border: 2px solid #0dcaf0;
+    border-radius: 10px;
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btnTable:hover, .btnTable:focus {
+    background-color: #0dcaf0;
+}

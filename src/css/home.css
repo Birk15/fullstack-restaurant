@@ -1,0 +1,43 @@
+.home {
+    padding-top: 100px;
+    margin-bottom: 20px;
+}
+
+.img-container {
+    z-index: 1;
+}
+.img-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.welcome {
+    position: absolute; /* Absolut über dem img-container */
+    z-index: 2;
+    top: 50%; /* Zentriert vertikal */
+    left: 50%; /* Zentriert horizontal */
+    transform: translate(-50%, -50%); /* Verschiebt das Element um die Hälfte seiner Breite und Höhe */
+    color: white; /* Weißer Text für besseren Kontrast */
+    text-align: center;
+
+    animation: zoomIn 1s ease 0s 1 normal none;
+}
+
+@media (max-width: 740px) {
+    .welcome h1, .welcome h2 {
+        font-size: xx-large;
+    }
+    .img-container img {
+        height: 80vh;
+        object-fit: cover;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: translate(-50%, -50%) scale(0); /* Startpunkt: Behalte die Zentrierung */
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1); /* Endpunkt: Behalte die Zentrierung und führe den Zoom durch */
+      }
+  }
